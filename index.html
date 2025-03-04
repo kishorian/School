@@ -1,0 +1,336 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sanghamitra Vidyalayam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media-queries.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: inherit;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #001f3f 0%, #001a35 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-logo {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #ffdd57;
+        }
+
+        .search-input {
+            transition: width 0.3s ease-in-out;
+        }
+
+        .search-input:focus {
+            width: 200px;
+        }
+
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section img {
+            transition: transform 10s ease;
+        }
+
+        .hero-section:hover img {
+            transform: scale(1.1);
+        }
+
+        .hero-content {
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background-color: white;
+            color: #001f3f;
+        }
+
+      
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Header Section -->
+    <header class="bg-blue-900 text-white font-cinzel">
+        <div class="container mx-auto py-4 px-6" style="background-color: #001f3f;">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="images/school-logo1.png" alt="Sanghamitra School Logo" class="h-10 w-10 mr-3">
+              <div>
+                <h1 class="text-xl font-bold">SANGHAMITRA VIDYALAYAM</h1>
+                <p class="text-sm">IN ASSOCIATION WITH NARAYANA GROUP OF SCHOOLS</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <input type="text" placeholder="Search..." class="px-2 py-1 rounded">
+              <button class="bg-yellow-400 text-blue-900 px-2 py-1 rounded">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="border-t border-white mt-4"></div>
+          <nav class="mt-4 flex justify-between space-x-6">
+            <a href="index.html" class="hover:text-yellow-400">Home</a>
+            <div class="dropdown relative">
+              <a  class="hover:text-yellow-400">About</a>
+              <div class="dropdown-content">
+                <a href="about-school.html">About School</a>
+                <a href="philosophy.html">Philosophy</a>
+                <a href="vision-mission.html">Vision & Mission</a>
+                <a href="management.html">Our Management</a>
+                <a href="achievements.html">Achievements</a>
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <a class="hover:text-yellow-400">Academics</a>
+              <div class="dropdown-content">
+                <a href="academics-pre-primary.html">Pre-Primary Level</a>
+                <a href="academics-primary.html">Primary Level</a>
+                <a href="academics-middle-secondary.html">Middle & Secondary Level</a>
+                <a href="academics-senior-secondary.html">Senior Secondary Level</a>
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <a  class="hover-underline-animation nav-link">Admissions</a>
+              <div class="dropdown-content absolute">
+                  <a href="admissions-info.html">Admission Info</a>
+                  <a href="admissions-process.html">Admission Process</a>
+                  <a href="admissions-apply-online.html">Apply Online</a>
+                  <a href="admissions-faqs.html">FAQs</a>
+              </div>
+          </div>
+          <a href="campus-life.html" class="hover:text-yellow-400">Campus Life</a>
+          <a href="news-events.html" class="hover:text-yellow-400">News & Events</a>
+            <a href="blogs.html" class="hover:text-yellow-400">Blogs</a>
+            <a href="facilities.html" class="hover:text-yellow-400">Facilities</a>
+            <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative p-6 md:p-12">
+        <img src="images/school_campus2.jpg" alt="Sanghamitra Campus" class="w-full h-96 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white hero-content">
+            <h2 class="text-4xl font-bold">WELCOME TO SANGHAMITRA FAMILY</h2>
+            <p class="text-xl mt-2">Where Excellence Meets Opportunity!</p>
+            <div class="flex space-x-4 mt-4">
+                <button class="bg-transparent border border-white px-4 py-2 hero-button">THINK MERIT</button>
+                <button class="bg-transparent border border-white px-4 py-2 hero-button">THINK TRANSPARENCY</button>
+                <button class="bg-transparent border border-white px-4 py-2 hero-button">THINK SANGHAMITRA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Message -->
+    <section class="py-16 bg-gray-100 text-center px-6 md:px-12">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold slide-up">THE SCHOOL OF EXCELLENCE</h3>
+            <p class="text-lg mt-4 slide-up">At Sanghamitra, we are committed to providing a holistic education that nurtures young minds and empowers them to become confident, compassionate, and successful individuals. Our mission is to foster a lifelong love of learning, develop critical thinking skills, and prepare students for the challenges and opportunities of the 21st century. We believe in creating a supportive and inclusive environment where every student can thrive and reach their full potential.</p>
+            <div class="mt-8 flex justify-center space-x-4 slide-up">
+                <a href="about-school.html" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition inline-block text-center">
+                    Discover Sanghamitra
+                </a>
+                <a href="admissions-apply-online.html" class="mt-8 bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition slide-up inline-block text-center">
+                    Apply Now
+                </a>            
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-white text-center px-6 md:px-12">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold slide-up">Explore Our Campus</h3>
+            <div class="mt-8 flex justify-center">
+                <video class="w-full md:w-3/4 h-64 md:h-96 rounded-lg shadow-lg" controls>
+                    <source src="images/sanghamitra-school-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-[#001f3f] text-white text-center px-6 md:px-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="bg-[#001a35] p-8 rounded transform transition hover:scale-105">
+                <h4 class="text-3xl font-bold">45+</h4>
+                <p class="mt-2">Years of Excellence</p>
+            </div>
+            <div class="bg-[#001a35] p-8 rounded transform transition hover:scale-105">
+                <h4 class="text-3xl font-bold">30:1</h4>
+                <p class="mt-2">Student-Teacher Ratio</p>
+            </div>
+            <div class="bg-[#001a35] p-8 rounded transform transition hover:scale-105">
+                <h4 class="text-3xl font-bold">680</h4>
+                <p class="mt-2">Students Enrolled in 2024</p>
+            </div>
+            <div class="bg-[#001a35] p-8 rounded transform transition hover:scale-105">
+                <h4 class="text-3xl font-bold">60</h4>
+                <p class="mt-2">Expert Faculty</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Banner -->
+    <section class="py-16 bg-gradient-to-b from-[#001f3f] to-[#001a35] text-center text-white px-6 md:px-12">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold slide-up">Admissions Open for 2025-26</h3>
+            <a href="admissions-apply-online.html" class="mt-8 bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition slide-up inline-block text-center">
+                Apply Now
+            </a>        
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#001f3f] text-white py-8 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold">Contact Us</h2>
+            <div class="mt-4 flex justify-center space-x-8">
+                <div class="contact-item">
+                    <strong>Phone:</strong><br>
+                    <span>9440087733, 90030223924</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong><br>
+                    <span><a href="mailto:sanghamitraemhs@gmail.com" class="text-yellow-500 hover:underline">sanghamitraemhs@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong><br>
+                    <span>B.V.NAGAR, NELLORE-4</span>
+                </div>
+            </div>
+            <div class="mt-8">
+                <img src="images/sraigen-logo.png" alt="Sraigen Logo" class="mx-auto h-16">
+                <p class="mt-2">Powered by Sraigen Innovative Technologies Pvt Ltd</p>
+            </div>
+        </div>
+        <div class="bg-[#001a35] py-4 mt-8">
+            <p class="text-center">© 2024 Sanghamitra - The School of Excellence. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for dropdown functionality
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', () => {
+                dropdown.querySelector('.dropdown-content').classList.add('block');
+            });
+            dropdown.addEventListener('mouseleave', () => {
+                dropdown.querySelector('.dropdown-content').classList.remove('block');
+            });
+        });
+    </script>
+</body>
+
+</html>

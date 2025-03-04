@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Application Form - Phoenix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="application-form">
+            <h2>Job Application</h2>
+            <p>Thank you for your interest in joining the Phoenix team. Please fill out the form below to apply for current openings.</p>
+            <form action="submit_application.php" method="post" enctype="multipart/form-data">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="resume">Resume:</label><br>
+                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br><br>
+
+                <label for="cover_letter">Cover Letter (Optional):</label><br>
+                <textarea id="cover_letter" name="cover_letter"></textarea><br><br>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Phoenix - The School of Excellence. All Rights Reserved.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management - Sanghamitra Vidyalayam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media-queries.css">
+   <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="bg-blue-900 text-white font-cinzel">
+        <div class="container mx-auto py-4 px-6" style="background-color: #001f3f;">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="images/school-logo1.png" alt="Sanghamitra School Logo" class="h-10 w-10 mr-3">
+              <div>
+                <h1 class="text-xl font-bold">SANGHAMITRA VIDYALAYAM</h1>
+                <p class="text-sm">IN ASSOCIATION WITH NARAYANA GROUP OF SCHOOLS</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <input type="text" placeholder="Search..." class="px-2 py-1 rounded">
+              <button class="bg-yellow-400 text-blue-900 px-2 py-1 rounded">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="border-t border-white mt-4"></div>
+          <nav class="mt-4 flex justify-between space-x-6">
+            <a href="index.html" class="hover:text-yellow-400">Home</a>
+            <div class="dropdown relative">
+              <a  class="hover:text-yellow-400">About</a>
+              <div class="dropdown-content">
+                <a href="about-school.html">About School</a>
+                <a href="philosophy.html">Philosophy</a>
+                <a href="vision-mission.html">Vision & Mission</a>
+                <a href="management.html">Our Management</a>
+                <a href="achievements.html">Achievements</a>
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <a class="hover:text-yellow-400">Academics</a>
+              <div class="dropdown-content">
+                <a href="academics-pre-primary.html">Pre-Primary Level</a>
+                <a href="academics-primary.html">Primary Level</a>
+                <a href="academics-middle-secondary.html">Middle & Secondary Level</a>
+                <a href="academics-senior-secondary.html">Senior Secondary Level</a>
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <a  class="hover-underline-animation nav-link">Admissions</a>
+              <div class="dropdown-content absolute">
+                  <a href="admissions-info.html">Admission Info</a>
+                  <a href="admissions-process.html">Admission Process</a>
+                  <a href="admissions-apply-online.html">Apply Online</a>
+                  <a href="admissions-faqs.html">FAQs</a>
+              </div>
+          </div>
+          <a href="campus-life.html" class="hover:text-yellow-400">Campus Life</a>
+          <a href="news-events.html" class="hover:text-yellow-400">News & Events</a>
+            <a href="blogs.html" class="hover:text-yellow-400">Blogs</a>
+            <a href="facilities.html" class="hover:text-yellow-400">Facilities</a>
+            <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+
+    <main class="p-6 bg-gray-200 font-open-sans">
+        <section class="management py-12">
+            <div class="container mx-auto text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+                <h1 class="text-3xl font-bold">Our Management Team</h1>
+                <p class="mt-4 text-gray-700">
+                    At Sanghamitra Vidyalayam, we are proud to have a highly dedicated and experienced management team that leads the school towards excellence. 
+                    Our leaders are committed to creating a nurturing and supportive environment where every student can thrive.
+                </p>
+
+                <div class="team-grid mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="team-member p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold">Mr. K. Ravindra Reddy</h2>
+                        <p class="text-xl text-gray-700">Correspondent</p>
+                        <p class="mt-4 text-gray-700">
+                            Mr. Reddy is a dedicated educator who believes in fostering a love of learning in students. 
+                            He uses innovative teaching methods to make education engaging and impactful.
+                        </p>
+                    </div>
+
+                    <div class="team-member p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold">Ms. G. Suchithra</h2>
+                        <p class="text-xl text-gray-700">Head Mistress</p>
+                        <p class="mt-4 text-gray-700">
+                            Ms. Suchithra is committed to providing a supportive and inclusive learning environment. 
+                            She ensures that every student receives the attention and resources they need to succeed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-12 font-cinzel" style="background-color: #001f3f;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold">Contact Us</h2>
+            <div class="mt-4 flex justify-center space-x-8">
+                <div class="contact-item">
+                    <p class="font-bold">Phone:</p>
+                    <p>9440087733, 90030223924</p>
+                </div>
+                <div class="contact-item">
+                    <p class="font-bold">Email:</p>
+                    <p><a href="mailto:sanghamitraemhs@gmail.com" class="text-yellow-500 hover:underline">sanghamitraemhs@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <p class="font-bold">Address:</p>
+                    <p>B.V.NAGAR, NELLORE-4</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <img src="images/sraigen-logo.png" alt="Sraigen Logo" class="mx-auto h-16">
+                <p class="mt-2">Powered by Sraigen Innovative Technologies Pvt Ltd</p>
+            </div>
+        </div>
+        <div class="bg-blue-800 py-4 mt-8">
+            <p class="text-center">© 2024 Sanghamitra - The School of Excellence. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

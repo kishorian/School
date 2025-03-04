@@ -1,0 +1,110 @@
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flex.items-center.space-x-2 {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .flex.items-center.space-x-2 input {
+        width: 70%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+
+    nav a, .dropdown {
+        margin: 0.5rem 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+
+    .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bg-blue-800.p-8.rounded-lg.shadow-lg {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        margin-bottom: 1rem;
+    }
+
+    .flex.justify-center.space-x-8 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Responsive Buttons */
+    .hero-section .flex.space-x-4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section .hero-button {
+        width: 80%;
+        margin: 0.5rem 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .welcome-message .flex.space-x-4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-message a {
+        width: 80%;
+        margin: 0.5rem 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .admissions-banner a {
+        width: 80%;
+        margin: 0.5rem 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bg-blue-800.p-8.rounded-lg.shadow-lg {
+        padding: 2rem;
+    }
+
+    /* Responsive Buttons */
+    .hero-section .hero-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .welcome-message a {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .admissions-banner a {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media-queries.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-title">
+                <img src="images/school-logo1.png" alt="Sanghamitra School Logo" class="logo">
+                <div class="school-title">
+                    <h1>SANGHAMITRA VIDYALAYAM</h1>
+                    <div class="association-banner">
+                        <h2>IN ASSOCIATION WITH NARAYANA GROUP OF SCHOOLS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="about-school.html">About</a>
+                    <ul class="dropdown">
+                        <li><a href="about-school.html">About School</a></li>
+                        <li><a href="vision-mission.html">Vision & Mission</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Academics</a>
+                    <ul class="dropdown">
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="schedule.html">Narayana Schedule</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Campus Life</a>
+                    <ul class="dropdown">
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">News & Events</a>
+                    <ul class="dropdown">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="calendar.html">School Calendar</a></li>
+                        <li><a href="announcements.html">Announcements</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const dropdownItems = document.querySelectorAll('.has-dropdown');
+
+        // Toggle mobile menu
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Handle dropdown menus on mobile
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.querySelector('.dropdown').classList.toggle('show');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.header-bottom')) {
+                mainNav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
